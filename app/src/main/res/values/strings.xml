@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Assasement1Raka</string>
+    <string name="parkirText">Sistem Pembayaran Parkir</string>
+    <string name="noKendaraanInput">No Kendaraan</string>
+    <string name="namaKendaraanInput">Nama Kendaraan</string>
+    <string name="dataKendaraanText">Data Kendaraan</string>
+    <string name="namaPemilikInput">Nama Pemilik</string>
+    <string name="tambahBtn">Tambah Kendaraan</string>
+    <string name="tambahKendaraanText">Tambah Kendaraan</string>
+
+    <string-array name="Jenis">
+        <item>Motor</item>
+        <item>Mobil</item>
+        <item>Truk</item>
+
+    </string-array>
+
+    <string name="dialogMessage">Data Kendaraan </string>
+    <string name="keluarText">Keluar Parkir</string>
+    <string name="pemasukanText">Data Pemasukan</string>
+    <string name="dataParkirText">Data Parkir</string>
+    <string name="perbaikanText">Mohon maaf, fitur sedang dalam perbaikan</string>
+</resources>
