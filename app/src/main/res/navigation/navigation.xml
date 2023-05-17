@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/kendaraanFragment">
+
+    <fragment
+        android:id="@+id/kendaraanFragment"
+        android:name="org.d3if0104.assasement1raka.ui.KendaraanFragment"
+        android:label="fragment_kendaraan"
+        tools:layout="@layout/fragment_kendaraan" >
+        <action
+            android:id="@+id/action_kendaraanFragment_to_aboutFragment"
+            app:destination="@id/aboutFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="org.d3if0104.assasement1raka.ui.AboutFragment"
+        android:label="AboutFragment"
+        tools:layout="@layout/fragment_about"/>
+</navigation>

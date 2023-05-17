@@ -20,4 +20,15 @@
     <string name="pemasukanText">Data Pemasukan</string>
     <string name="dataParkirText">Data Parkir</string>
     <string name="perbaikanText">Mohon maaf, fitur sedang dalam perbaikan</string>
+    <string name="tentang_aplikasi">Tentang Aplikasi</string>
+    <string name="about">Aplikasi ini merupakan sebuah aplikasi Android untuk
+mencatat kendaraan yang parkir sehingga memudahkan untuk proses pembayaran ataupun mengetahui
+berapa kendaraan yang parkir.\n\nAplikasi ini dibuat untuk memenuhi tugas Assasement 2.\n\nCopyright © 2023 Raka Ryaudi Nalda.\nAll rights reserved.</string>
+    <string name="bagikan">Bagikan</string>
+    <string name="bagikan_template">--DATA KENDARAAN PARKIR--\n\n
+        No Kendaraan: %1$s\n
+        Nama Kendaraan: %2$s\n
+        Nama Pemilik: %3$s\n
+        Jenis Kendaraan: %4$s
+    </string>
 </resources>

@@ -1,33 +1,23 @@
 package org.d3if0104.assasement1raka
 
-import android.content.Intent
+
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import org.d3if0104.assasement1raka.databinding.HomeBinding
-import org.d3if0104.assasement1raka.databinding.UnderMaintenanceBinding
+import androidx.navigation.NavController
+import androidx.navigation.findNavController
+import androidx.navigation.ui.NavigationUI
 
 class MainActivity : AppCompatActivity() {
-    lateinit var binding: HomeBinding
 
+    private lateinit var navController: NavController
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setContentView(R.layout.home)
 
-        binding = HomeBinding.inflate(layoutInflater)
-        setContentView(binding.root)
-
-        binding.tambahIcon.setOnClickListener { tambah() }
-        binding.pemasukanIcon.setOnClickListener { keluar() }
-        binding.keluarIcon.setOnClickListener { keluar() }
-        binding.dataIcon.setOnClickListener { keluar() }
+        navController = findNavController(R.id.myNavHostFragment)
+        NavigationUI.setupActionBarWithNavController(this, navController)
     }
-
-    fun tambah(){
-        val intent = Intent(this, TambahKendaraan::class.java)
-        startActivity(intent)
-    }
-
-    fun keluar(){
-        val intent = Intent(this, UnderMaintenance::class.java)
-        startActivity(intent)
+    override fun onSupportNavigateUp(): Boolean {
+        return navController.navigateUp()
     }
 }
