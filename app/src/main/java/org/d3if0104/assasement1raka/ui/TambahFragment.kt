@@ -11,15 +11,27 @@ import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import org.d3if0104.assasement1raka.R
+import org.d3if0104.assasement1raka.data.SettingDataStore
+import org.d3if0104.assasement1raka.data.dataStore
 import org.d3if0104.assasement1raka.databinding.FragmentTambahBinding
+import org.d3if0104.assasement1raka.db.KendaraanDb
+import org.d3if0104.assasement1raka.kendaraan.KendaraanViewModel
+import org.d3if0104.assasement1raka.kendaraan.KendaraanViewModelFactory
 import org.d3if0104.assasement1raka.model.Kendaraan
 
 class TambahFragment : Fragment() {
     private lateinit var binding: FragmentTambahBinding
 
     private val viewModel: KendaraanViewModel by lazy {
-        ViewModelProvider(this)[KendaraanViewModel::class.java]
+        val db = KendaraanDb.getInstance(requireContext())
+        val factory = KendaraanViewModelFactory(db.dao)
+        ViewModelProvider(this, factory)[KendaraanViewModel::class.java]
     }
+
+    private val layoutDataStore: SettingDataStore by lazy {
+        SettingDataStore(requireContext().dataStore)
+    }
+
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -77,7 +89,7 @@ class TambahFragment : Fragment() {
         val jenis = binding.spinner.selectedItem.toString()
 
         val message = getString(R.string.bagikan_template,
-        noKendaraan, namaKendaraan, pemilik, jenis
+            noKendaraan, namaKendaraan, pemilik, jenis
         )
 
         val shareIntent = Intent(Intent.ACTION_SEND)

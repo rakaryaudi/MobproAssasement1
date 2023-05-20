@@ -1,13 +1,13 @@
-package org.d3if0104.assasement1raka.ui
+package org.d3if0104.assasement1raka.kendaraan
 
 import android.content.Intent
 import android.os.Bundle
 import android.view.*
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import org.d3if0104.assasement1raka.R
-import org.d3if0104.assasement1raka.TambahKendaraan
 import org.d3if0104.assasement1raka.UnderMaintenance
 import org.d3if0104.assasement1raka.databinding.FragmentKendaraanBinding
 
@@ -30,16 +30,16 @@ class KendaraanFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.tambahIcon.setOnClickListener { tambah() }
+        binding.tambahIcon.setOnClickListener { it.findNavController().navigate(
+            R.id.action_kendaraanFragment_to_tambahFragment
+        ) }
         binding.pemasukanIcon.setOnClickListener { keluar() }
         binding.keluarIcon.setOnClickListener { keluar() }
-        binding.dataIcon.setOnClickListener { keluar() }
+        binding.dataIcon.setOnClickListener { it.findNavController().navigate(
+            R.id.action_kendaraanFragment_to_historiFragment
+        ) }
     }
 
-    private fun tambah() {
-        val intent = Intent(requireContext(), TambahKendaraan::class.java)
-        startActivity(intent)
-    }
 
     private fun keluar() {
         val intent = Intent(requireContext(), UnderMaintenance::class.java)

@@ -31,4 +31,16 @@ berapa kendaraan yang parkir.\n\nAplikasi ini dibuat untuk memenuhi tugas Assase
         Nama Pemilik: %3$s\n
         Jenis Kendaraan: %4$s
     </string>
+    <string name="belum_ada_data">Belum ada data</string>
+    <string name="histori">Histori</string>
+    <string name="list">
+        No Kendaraan: %1$s\n
+        Nama Kendaraan: %2$s\n
+        Nama Pemilik: %3$s\n
+        Jenis Kendaraan: %4$s
+    </string>
+    <string name="hapus_histori">Hapus Histori</string>
+    <string name="konfirmasi_hapus">Hapus semua histori?</string>
+    <string name="hapus">Hapus</string>
+    <string name="batal">Batal</string>
 </resources>
