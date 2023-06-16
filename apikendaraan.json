@@ -1,5 +1,5 @@
 [
-{"jenis_kendaraan" : "Motor", "tarif": "2000 / jam", "image_id" : "motor" },
-{"jenis_kendaraan" : "Mobil", "tarif": "4000 / jam", "image_id" : "mobil" },
-{"jenis_kendaraan" : "Truck", "tarif": "5000 / jam", "image_id" : "truk" }
+{"jeniskendaraan" : "Motor", "tarif": "2000 / jam", "gambar" : "motor" },
+{"jeniskendaraan" : "Mobil", "tarif": "4000 / jam", "gambar" : "mobil" },
+{"jeniskendaraan" : "Truck", "tarif": "5000 / jam", "gambar" : "truk" }
 ]
