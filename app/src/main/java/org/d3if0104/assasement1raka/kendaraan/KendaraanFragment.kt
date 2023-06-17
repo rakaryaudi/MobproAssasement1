@@ -10,6 +10,7 @@ import androidx.navigation.fragment.findNavController
 import org.d3if0104.assasement1raka.R
 import org.d3if0104.assasement1raka.UnderMaintenance
 import org.d3if0104.assasement1raka.databinding.FragmentKendaraanBinding
+import org.d3if0104.assasement1raka.network.KendaraanApi
 
 class KendaraanFragment : Fragment() {
     private lateinit var binding: FragmentKendaraanBinding
@@ -33,7 +34,9 @@ class KendaraanFragment : Fragment() {
         binding.tambahIcon.setOnClickListener { it.findNavController().navigate(
             R.id.action_kendaraanFragment_to_tambahFragment
         ) }
-        binding.pemasukanIcon.setOnClickListener { keluar() }
+        binding.pemasukanIcon.setOnClickListener { it.findNavController().navigate(
+            R.id.action_kendaraanFragment_to_tarifFragment
+        ) }
         binding.keluarIcon.setOnClickListener { keluar() }
         binding.dataIcon.setOnClickListener { it.findNavController().navigate(
             R.id.action_kendaraanFragment_to_historiFragment
@@ -57,6 +60,20 @@ class KendaraanFragment : Fragment() {
             return true
         }
         return super.onOptionsItemSelected(item)
+    }
+    private fun updateProgress(status: KendaraanApi.ApiStatus) {
+        when (status) {
+            KendaraanApi.ApiStatus.LOADING -> {
+                binding.progressBar.visibility = View.VISIBLE
+            }
+            KendaraanApi.ApiStatus.SUCCESS -> {
+                binding.progressBar.visibility = View.GONE
+            }
+            KendaraanApi.ApiStatus.FAILED -> {
+                binding.progressBar.visibility = View.GONE
+                binding.networkError.visibility = View.VISIBLE
+            }
+        }
     }
 
 }

@@ -19,6 +19,9 @@
         <action
             android:id="@+id/action_kendaraanFragment_to_historiFragment"
             app:destination="@id/historiFragment" />
+        <action
+            android:id="@+id/action_kendaraanFragment_to_tarifFragment"
+            app:destination="@id/tarifFragment" />
     </fragment>
     <fragment
         android:id="@+id/aboutFragment"
@@ -35,4 +38,9 @@
         android:name="org.d3if0104.assasement1raka.histori.HistoriFragment"
         android:label="@string/histori"
         tools:layout="@layout/fragment_histori"/>
+    <fragment
+        android:id="@+id/tarifFragment"
+        android:name="org.d3if0104.assasement1raka.TarifFragment"
+        android:label="Tarif"
+        tools:layout="@layout/fragment_tarif"/>
 </navigation>

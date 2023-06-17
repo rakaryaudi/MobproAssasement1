@@ -17,7 +17,7 @@
 
     <string name="dialogMessage">Data Kendaraan </string>
     <string name="keluarText">Keluar Parkir</string>
-    <string name="pemasukanText">Data Pemasukan</string>
+    <string name="pemasukanText">Tarif Parkir</string>
     <string name="dataParkirText">Data Parkir</string>
     <string name="perbaikanText">Mohon maaf, fitur sedang dalam perbaikan</string>
     <string name="tentang_aplikasi">Tentang Aplikasi</string>
@@ -43,4 +43,9 @@ berapa kendaraan yang parkir.\n\nAplikasi ini dibuat untuk memenuhi tugas Assase
     <string name="konfirmasi_hapus">Hapus semua histori?</string>
     <string name="hapus">Hapus</string>
     <string name="batal">Batal</string>
+    <string name="koneksi_error">Koneksi error</string>
+    <string name="channel_name">Updater</string>
+    <string name="channel_desc">Update data kendaraan otomatis</string>
+    <string name="notif_title">Anda belum update data parkir nih:(</string>
+    <string name="notif_text">Cek sekarang!</string>
 </resources>

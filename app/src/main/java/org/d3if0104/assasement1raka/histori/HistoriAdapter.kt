@@ -2,14 +2,14 @@ package org.d3if0104.assasement1raka.histori
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import org.d3if0104.assasement1raka.R
 import org.d3if0104.assasement1raka.databinding.ItemHistoriBinding
 import org.d3if0104.assasement1raka.db.KendaraanEntity
-import org.d3if0104.assasement1raka.model.Kendaraan
+import org.d3if0104.assasement1raka.network.KendaraanApi
 
 class HistoriAdapter :
     ListAdapter<KendaraanEntity, HistoriAdapter.ViewHolder>(DIFF_CALLBACK) {

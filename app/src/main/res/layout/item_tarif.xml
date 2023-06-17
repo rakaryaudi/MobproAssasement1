@@ -15,15 +15,15 @@
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="Data Kendaraan Parkir" />
+        tools:text="Tarif Parkir" />
+
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_width="67dp"
+        android:layout_height="63dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
-        android:background="@drawable/circle_background"
         android:gravity="center"
         android:textColor="@color/white"
         android:textSize="20sp"
@@ -33,43 +33,23 @@
         tools:text="I" />
 
     <TextView
-        android:id="@+id/dataNoKendTextView"
+        android:id="@+id/jenisTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@+id/judulTextView"
         app:layout_constraintTop_toBottomOf="@+id/judulTextView"
         app:layout_constraintVertical_bias="0.103"
-        tools:text="No Kendaraan: 1234" />
+        tools:text="Jenis Kendaraan : Motor" />
 
     <TextView
-        android:id="@+id/dataNamaKendTextView"
+        android:id="@+id/tarifTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/dataNoKendTextView"
-        app:layout_constraintTop_toBottomOf="@+id/dataNoKendTextView"
+        app:layout_constraintStart_toStartOf="@+id/jenisTextView"
+        app:layout_constraintTop_toBottomOf="@+id/jenisTextView"
         app:layout_constraintVertical_bias="0.157"
-        tools:text="Nama Kendaraan: Honda Civic" />
+        tools:text="Tarif per Jam : 2000 / jam" />
 
-    <TextView
-        android:id="@+id/dataPemilikKendTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/dataNamaKendTextView"
-        app:layout_constraintTop_toBottomOf="@+id/dataNamaKendTextView"
-        app:layout_constraintVertical_bias="0.0"
-        tools:text="Nama Pemilik: Raka Ryaudi Nalda" />
-
-    <TextView
-        android:id="@+id/dataJenisKendTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/dataPemilikKendTextView"
-        app:layout_constraintTop_toBottomOf="@+id/dataPemilikKendTextView"
-        tools:text="Jenis Kendaraan: Mobil" />
 </androidx.constraintlayout.widget.ConstraintLayout>
